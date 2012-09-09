@@ -69,7 +69,7 @@ $chunks[1]->fromArray(array(
 	'id' => 1,
 	'name' => 'inner',
 	'description' => 'Default inner template containing each tag',
-	'snippet' => file_get_contents($sources['source_core'] . '/elements/chunks/inner.chunk.tpl'),
+	'snippet' => file_get_contents($sources['source_core'] . '/elements/chunks/gallerytag-inner.chunk.tpl'),
 	'properties' => ''
 ), '', true, true);
 $chunks[2] = $modx->newObject('modChunk');
@@ -77,7 +77,7 @@ $chunks[2]->fromArray(array(
 	'id' => 2,
 	'name' => 'outer',
 	'description' => 'Default outer template',
-	'snippet' => file_get_contents($sources['source_core'] . '/elements/chunks/outer.chunk.tpl'),
+	'snippet' => file_get_contents($sources['source_core'] . '/elements/chunks/gallerytag-outer.chunk.tpl'),
 	'properties' => ''
 ), '', true, true);
 
