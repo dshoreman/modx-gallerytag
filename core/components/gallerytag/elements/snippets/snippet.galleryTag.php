@@ -11,8 +11,7 @@ $rowboat = $modx->getService('rowboat','Rowboat',$modx->getOption('rowboat.core_
 if (!($rowboat instanceof Rowboat)) return 'no rowboat';
 
 $columns = array(
-	'a.id' => 'id',
-	't.tag' => 'tag'
+	'DISTINCT(tag)' => 'tag',
 );
 $table = 'gallery_album_items AS a LEFT JOIN gallery_tags AS t ON a.item = t.item';
 $where = array('a.album' => $albumId, 'tag != ""');
