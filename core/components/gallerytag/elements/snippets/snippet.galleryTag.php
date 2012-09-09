@@ -8,46 +8,33 @@
  */
 
 $rowboat = $modx->getService('rowboat','Rowboat',$modx->getOption('rowboat.core_path',null,$modx->getOption('core_path').'components/rowboat/').'model/rowboat/',$scriptProperties);
-if (!($rowboat instanceof Rowboat)) return 'no rowboat';
+if (!($rowboat instanceof Rowboat))
+{
+	return 'no rowboat';
+}
 
-$columns = array(
-	'DISTINCT(tag)' => 'tag',
-);
-$table = 'gallery_album_items AS a LEFT JOIN gallery_tags AS t ON a.item = t.item';
-$where = array('a.album' => $albumId, 'tag != ""');
-
-$c = $rowboat->newQuery($table);
-if (empty($c)) {
+$c = $rowboat->newQuery('gallery_album_items AS a LEFT JOIN gallery_tags AS t ON a.item = t.item');
+if (empty($c))
+{
 	return $modx->lexicon('rowboat.no_driver',array('dbtype' => $modx->config['dbtype']));
 }
-
-if ($columns != '*') {
-	if (!empty($columns)) {
-		$c->select($columns);
-	}
-}
-
-if (!empty($where)) {
-	if (!empty($where)) {
-		$c->where($where);
-	}
-}
+$c->select(array('DISTINCT(tag)' => 'tag'));
+$c->where(array('a.album' => $albumId, 'tag != ""'));
 
 $sql = $c->toSql();
-var_dump($sql);
-if ($c->execute()) {
+$tags = array();
+if ($c->execute())
+{
 	$results = $c->getResults();
-	$total = count($results);
 	$c->close();
-}
 
-/* iterate across results */
-$tags = '';
-if (is_array($results)) {
-	foreach ($results as $row)
+	if (is_array($results))
 	{
-		$tags .= '<pre>'.print_r($row, true).'</pre>';//$rowboat->getChunk($innerTpl, $row);
+		foreach ($results as $row)
+		{
+			$tags[] = $rowboat->getChunk($innerTpl, $row);
+		}
 	}
 }
 
-return $modx->getChunk($outerTpl, array('tags' => $tags));
+return $modx->getChunk($outerTpl, array('tags' => implode("\n\t", $tags)));
