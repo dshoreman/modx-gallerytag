@@ -1,6 +1,6 @@
 == MODx Gallery Tag ==
 
-
+Lists all unique tags used by photos contained within a specific album.
 
 === Installation ===
 
@@ -12,8 +12,8 @@ From the Download Extras dropdown, choose Search Locally for Packages. Install t
 === Basic Usage ===
 
 The basic snippet call takes one parameter:
-[[!galleryTag?albumId=2]]
+[[!galleryTag?albumId=`[[+gallery.id]]`]]
 
 
 To customise the inner and outer templates, there are two extra parameters:
-[[!galleryTag?albumId=2 &outerTpl=`` &innerTpl=``]]
+[[!galleryTag?albumId=`[[+gallery.id]]` &outerTpl=`my_outer_tpl` &innerTpl=`my_inner_tpl`]]
