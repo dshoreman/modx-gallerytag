@@ -12,11 +12,10 @@ if (!($rowboat instanceof Rowboat)) return 'no rowboat';
 
 $columns = array(
 	'a.id' => 'id',
-	'a.album' => 'album',
 	't.tag' => 'tag'
 );
 $table = 'gallery_album_items AS a LEFT JOIN gallery_tags AS t ON a.item = t.item';
-$where = array('a.album' => $albumId);
+$where = array('a.album' => $albumId, 'tag != ""');
 
 $c = $rowboat->newQuery($table);
 if (empty($c)) {
