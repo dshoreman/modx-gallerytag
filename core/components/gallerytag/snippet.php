@@ -2,7 +2,7 @@
 /**
  * MODx Gallery Tag Snippet
  *
- * @package modx-gallerytag
+ * @package gallerytag
  * @subpackage snippet
  * @author Dave Shoreman <codeM0nK3Y@me.com>
  */
@@ -14,4 +14,4 @@ $albumId = $modx->getOption('albumId', $scriptProperties, NULL);
 $innerTpl = $modx->getOption('innerTpl', $scriptProperties, 'gallerytag-inner');
 $outerTpl = $modx->getOption('outerTpl', $scriptProperties, 'gallerytag-outer');
 
-return include($modx->getOption('core_path') . 'components/modx-gallerytag/elements/snippets/snippet.galleryTag.php');
+return include($modx->getOption('core_path') . 'components/gallerytag/elements/snippets/snippet.galleryTag.php');

@@ -23,4 +23,4 @@ To customise the inner and outer templates, there are two extra parameters:
 }}}
 
 === Changelog ===
-Look in /core/components/modx-gallerytag/docs/changelog.txt
+Look in /core/components/gallerytag/docs/changelog.txt

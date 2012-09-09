@@ -2,7 +2,7 @@
 /**
  * MODx Gallery Tag Snippet
  *
- * @package modx-gallerytag
+ * @package gallerytag
  * @subpackage snippet
  * @author Dave Shoreman <codeM0nK3Y@me.com>
  */

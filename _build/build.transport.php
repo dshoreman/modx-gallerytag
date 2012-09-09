@@ -2,15 +2,15 @@
 /**
  * MODX GalleryTag Build Script
  *
- * @package modx-gallerytag
+ * @package gallerytag
  * @subpackage build
  * @author Dave Shoreman <codeM0nK3Y@me.com>
  */
 
-define('PKG_NAME', 'MODx Gallery Tag');
-define('PKG_NAME_LOWER', 'modx-gallerytag');
-define('PKG_VERSION', '1.0.0');
-define('PKG_RELEASE', 'pl');
+define('PKG_NAME', 'GalleryTag');
+define('PKG_NAME_LOWER', 'gallerytag');
+define('PKG_VERSION', '0.0.3');
+define('PKG_RELEASE', 'dev');
 define('PKG_CATEGORY', 'Gallery');
 
 $mtime = microtime();
@@ -54,7 +54,7 @@ $snippets = array();
 
 $snippets[1] = $modx->newObject('modSnippet');
 $snippets[1]->set('id', 0);
-$snippets[1]->set('name', 'galleryTag');
+$snippets[1]->set('name', 'GalleryTag');
 $snippets[1]->set('description', 'Generate a list of tags for a given Gallery album ID.');
 $snippets[1]->set('snippet', file_get_contents($sources['source_core'] . '/snippet.php'));
 
@@ -66,16 +66,16 @@ $chunks = array();
 
 $chunks[1] = $modx->newObject('modChunk');
 $chunks[1]->fromArray(array(
-	'id' => 1,
-	'name' => 'inner',
+	'id' => 0,
+	'name' => 'gallerytag-inner',
 	'description' => 'Default inner template containing each tag',
 	'snippet' => file_get_contents($sources['source_core'] . '/elements/chunks/gallerytag-inner.chunk.tpl'),
 	'properties' => ''
 ), '', true, true);
 $chunks[2] = $modx->newObject('modChunk');
 $chunks[2]->fromArray(array(
-	'id' => 2,
-	'name' => 'outer',
+	'id' => 0,
+	'name' => 'gallerytag-outer',
 	'description' => 'Default outer template',
 	'snippet' => file_get_contents($sources['source_core'] . '/elements/chunks/gallerytag-outer.chunk.tpl'),
 	'properties' => ''

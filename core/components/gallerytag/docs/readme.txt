@@ -17,6 +17,3 @@ The basic snippet call takes one parameter:
 
 To customise the inner and outer templates, there are two extra parameters:
 [[!galleryTag?albumId=2 &outerTpl=`` &innerTpl=``]]
-
-=== Changelog ===
-Look in /core/components/modx-gallerytag/docs/changelog.txt
