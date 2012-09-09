@@ -1,8 +1,9 @@
 <?php
 /**
+ * MODx Gallery Tag Snippet
  *
- * @package modMailchimp
- * @subpackage lists snippet
+ * @package modx-gallerytag
+ * @subpackage snippet
  * @author Dave Shoreman <codeM0nK3Y@me.com>
  */
 

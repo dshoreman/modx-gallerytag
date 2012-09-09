@@ -2,7 +2,7 @@
 /**
  * Define the MODx path constants needed for core install
  *
- * @package modMailchimp
+ * @package modx-gallerytag
  * @subpackage build
  * @author Dave Shoreman <codeM0nK3Y@me.com>
  */

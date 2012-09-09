@@ -1,8 +1,8 @@
 <?php
 /**
- * MailChimp Build Script
+ * MODX GalleryTag Build Script
  *
- * @package modMailchimp
+ * @package modx-gallerytag
  * @subpackage build
  * @author Dave Shoreman <codeM0nK3Y@me.com>
  */
