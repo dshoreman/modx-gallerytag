@@ -13,13 +13,13 @@ From the Download Extras dropdown, choose Search Locally for Packages. Install t
 
 The basic snippet call takes one parameter:
 {{{
-[[!galleryTag?albumId=2]]
+[[!galleryTag?albumId=`[[+gallery.id]]`]]
 }}}
 
 
 To customise the inner and outer templates, there are two extra parameters:
 {{{
-[[!galleryTag?albumId=2 &outerTpl=`my_tag_outer` &innerTpl=`my_tag_inner`]]
+[[!galleryTag?albumId=`[[+gallery.id]]` &outerTpl=`my_tag_outer` &innerTpl=`my_tag_inner`]]
 }}}
 
 === Changelog ===
