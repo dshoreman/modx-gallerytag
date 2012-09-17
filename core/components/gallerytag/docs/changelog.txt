@@ -1,2 +1,6 @@
+[1.0.1-pl]
+* Added support for table prefix
+* Better readme
+
 [1.0.0-pl]
 * Initial release

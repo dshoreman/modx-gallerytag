@@ -13,7 +13,8 @@ if (!($rowboat instanceof Rowboat))
 	return 'no rowboat';
 }
 
-$c = $rowboat->newQuery('gallery_album_items AS a LEFT JOIN gallery_tags AS t ON a.item = t.item');
+$join = 'LEFT JOIN '.$gallery_prefix.'gallery_tags AS t ON a.item = t.item';
+$c = $rowboat->newQuery($gallery_prefix.'gallery_album_items AS a '.$join);
 if (empty($c))
 {
 	return $modx->lexicon('rowboat.no_driver',array('dbtype' => $modx->config['dbtype']));
