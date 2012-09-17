@@ -9,8 +9,8 @@
 
 define('PKG_NAME', 'GalleryTag');
 define('PKG_NAME_LOWER', 'gallerytag');
-define('PKG_VERSION', '0.0.3');
-define('PKG_RELEASE', 'dev');
+define('PKG_VERSION', '1.0.0');
+define('PKG_RELEASE', 'pl');
 define('PKG_CATEGORY', 'Gallery');
 
 $mtime = microtime();
